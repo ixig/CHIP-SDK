@@ -81,7 +81,9 @@ And here's a photo with the jumper plugged in...
 
 ![Image of CHIP](https://nextthingco.zendesk.com/hc/en-us/article_attachments/203164668/DSCF2062.JPG "Image of jumpered CHIP")
 
-It's worth noting that this jumper needs to be present only when you connect CHIP to power. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
+CHIP: It's worth noting that this jumper needs to be present only when you connect CHIP to power. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
+
+CHIP PRO: Press, and *HOLD* the FEL button until *AFTER* after the "fastboot .... OK" message from chip-update-firmware.sh .
 
 Now connect CHIP to your computer with a micro-USB→USB-B cable. The power LED will illuminate.
 
