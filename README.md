@@ -117,7 +117,7 @@ If you're familiar with the old version of the scripts, these options should sou
       -F  --  Format             [eg. -F Toshiba_4G_MLC]    
       -L  --  Local              [eg. -L ../img/buildroot/] 
 
-## Flash a new C.H.I.P. with the NTC headless Debian image... 
+## Flash a new C.H.I.P. with the NTC headless Debian image... (N/A for CHIP PRO)
 
 If you want to flash C.H.I.P. with a custom image, scroll down the page...If you're cool with our current headless image, keep going!
 
@@ -141,14 +141,14 @@ You can login to CHIP as **chip** or if you feel more powerful as **root**. In b
 
 If everything passed, your C.H.I.P. is ready to go!  Have fun!
 
-## Flash a C.H.I.P. with Debian + GUI
+## Flash a C.H.I.P. with Debian + GUI (N/A for CHIP PRO)
 
 Along with the instructions above, to flash our Debian image with the official C.H.I.P. GUI, you'll have to insert another option into the command. The `-g` flag will pull in Debian with a GUI-based version of the image.
 
     ./chip-update-firmware.sh -g
 
 
-## Flash a C.H.I.P. with Buildroot
+## Flash a C.H.I.P. with Buildroot (N/A for CHIP PRO)
 
     ./chip-update-firmware.sh -b
 
@@ -165,7 +165,8 @@ Logged in to the virtual machine again starting from our *trusty* prompt:
 Lets' get in there and make something.
 
     cd ~/CHIP-buildroot
-    make chip_defconfig
+    make chip_defconfig    # for CHIP, else,
+    make chippro_defconfig # for CHIP PRO
     make nconfig
 
 From here, you can navigate the menu and select what you want to flash onto your C.H.I.P. and what you don't. Detailing custom buildroot images is outside the scope of this tutorial.  If you're curious, read Free Electrons wonderful [buildroot documentation](http://buildroot.uclibc.org/docs.html).
@@ -178,7 +179,7 @@ When you're finished with your selections, exit by hitting the F9 key, which wil
 
 Now let's build your buildroot...
 
-    make
+    make  # do not use -jN for top-level
 
 This will take a while.  Depending on your computer, maybe an hour.  Maybe grab some coffee...
 
